@@ -40,7 +40,7 @@
 
       <section class="buttons">
 
-        <button>+ Adicionar Ideias</button>
+        <button onclick="onOff()">+ Adicionar Ideias</button>
         <button class="fat">Ver Ideias</button>
       </section>
 
@@ -112,7 +112,7 @@
   </div>
 
   <!--Modal-->
-  <div id="modal">
+  <div id="modal" class="hide">
     <div class="content">
       <h1>Nova Ideia</h1>
 
@@ -143,6 +143,7 @@
           <input type="url" name="link">
         </div>
 
+        <a href="#" onclick="onOff()">Voltar</a>
         <button>Salvar</button>
 
       </form>
@@ -150,14 +151,14 @@
   </div>
 
   <script>
-    document
-      .querySelector("button.fat")
-      .addEventListener("click", function () {
-        document
-          .querySelector("#footer")
-          .classList
-          .toggle("hide")
-      })
+
+    function onOff() {
+      document
+        .querySelector("#modal")
+        .classList
+        .toggle("hide")
+    }
+
 
 
   </script>
