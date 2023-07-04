@@ -5,11 +5,11 @@ body {
   margin: 0;
 
   font-family: 'Montserrat', sans-serif;
-  
+
 }
 
 a {
-  color:#ff5e84;
+  color: #ff5e84;
 
   font-weight: bold;
 
@@ -20,7 +20,8 @@ a:hover {
   text-decoration: none;
 }
 
-p, .description {
+p,
+.description {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.1px;
@@ -38,25 +39,26 @@ p, .description {
 
 #intro {
   width: 300px;
-  margin-right: 20px:
+  margin-right: 20px;
 }
 
 main {
-  margin: 32px  ;;
+  margin: 32px;
+  ;
 }
 
 .buttons {
- display: flex;
- justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 
- margin-bottom: 32px;
- 
- 
+  margin-bottom: 32px;
+
+
 }
 
 footer {
   text-align: center;
-  
+
 }
 
 button {
@@ -72,6 +74,7 @@ button {
   line-height: 18px;
   letter-spacing: 0.2px;
 }
+
 button:hover {
   text-decoration: underline;
 }
@@ -86,6 +89,7 @@ button:hover {
   border-radius: 60px 0;
   box-shadow: 0 8px 16px rgba(255, 0, 92, 0.40);
 }
+
 button.fat:hover {
   text-decoration: none;
 }
@@ -205,13 +209,13 @@ form label {
 }
 
 form a {
- background-color: #ffffff22;
- color: white;
+  background-color: #ffffff22;
+  color: white;
 
- width: 150px;
- height: 40px;
+  width: 150px;
+  height: 40px;
 
- border-radius: 6px;
+  border-radius: 6px;
 
   text-transform: uppercase;
 
@@ -219,13 +223,13 @@ form a {
 
   margin-top: 16px;
 
- display: flex;
- align-items: center;
- justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
- align-self: end;
+  align-self: end;
 
- transition: 400ms;
+  transition: 400ms;
 }
 
 form a:hover {
@@ -264,4 +268,100 @@ form button:hover {
 #modal.hide {
   opacity: 0;
   visibility: hidden;
+}
+
+/*ideias.html  */
+
+#page-ideas #container {
+  display: block;
+}
+
+#page-ideas header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#page-ideas nav {
+  display: flex;
+  align-items: center;
+
+
+}
+
+#page-ideas nav li {
+  list-style-type: none;
+
+  margin-right: 16px;
+
+}
+
+#page-ideas nav li a {
+  color: black;
+}
+
+#page-ideas nav li:last-child {
+  margin: 0;
+}
+
+#page-ideas nav li:last-child a {
+  color: #fff;
+
+  width: 150px;
+  height: 40px;
+
+  background-color: #ff5e84;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 6px;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  transition: 400ms;
+
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  font-weight: bold;
+}
+
+#page-ideas nav li:last-child a:hover {
+  background-color: #0984e3;
+
+  text-decoration: none;
+}
+
+/*SECTION  */
+
+section#title {
+  text-align: center;
+
+  margin: 64px 0;
+}
+
+section#title p {
+  opacity: 0.6;
+  margin: 0;
+}
+
+section#title h1 {
+  margin: 0;
+
+  font-size: 28px;
+}
+
+/* MAIN SECTION */
+section#ideas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 20px;
+}
+
+section#ideas .idea {
+  margin: 0;
 }
