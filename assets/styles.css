@@ -8,6 +8,10 @@ body {
 
 }
 
+body.hideScroll {
+  overflow: hidden;
+}
+
 a {
   color: #ff5e84;
 
@@ -61,6 +65,7 @@ footer {
 
 }
 
+
 button {
   color: #ff5e84;
   background: none;
@@ -79,7 +84,7 @@ button:hover {
   text-decoration: underline;
 }
 
-.fat {
+.button {
   color: #ffff;
   background: #ff5e84;
 
@@ -88,9 +93,22 @@ button:hover {
 
   border-radius: 60px 0;
   box-shadow: 0 8px 16px rgba(255, 0, 92, 0.40);
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition: 400ms;
 }
 
-button.fat:hover {
+.button:hover {
+  background: #fff;
+  color: #ff5e84;
+
   text-decoration: none;
 }
 
@@ -149,16 +167,20 @@ footer a {
 
   position: absolute;
   top: 0;
-
-  width: 100vw;
-  height: 100vh;
+  bottom: 0;
+  right: 0;
+  left: 0;
 
   display: flex;
   justify-content: center;
 }
 
+#modal.addScroll {
+  overflow: auto;
+}
+
 #modal .content {
-  margin-top: 12px;
+  margin-top: 6%;
 
   color: white;
 }
@@ -172,7 +194,7 @@ footer a {
   width: 80%;
   max-width: 700px;
 
-  margin: 0 auto;
+  margin: 0 auto 6%;
 
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -339,8 +361,6 @@ form button:hover {
 
 section#title {
   text-align: center;
-
-  margin: 64px 0;
 }
 
 section#title p {
@@ -364,4 +384,10 @@ section#ideas {
 
 section#ideas .idea {
   margin: 0;
+}
+
+section#title,
+section#ideas,
+footer {
+  margin-top: 64px;
 }
