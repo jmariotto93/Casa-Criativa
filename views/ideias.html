@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet">
+    <title>Ideias - Casa Criativa </title>
+</head>
+
+<body id="page-ideas">
+
+    <div id="container">
+        <header>
+            <a href="/">
+                <img src="/logo.png" alt="Logo do site" />
+            </a>
+            <nav>
+                <li><a href="/">Início</a></li>
+                <li><a href="#" onclick="onOff()">Nova Ideia</a></li>
+            </nav>
+        </header>
+
+        <section id="title">
+            <p>em exibição</p>
+            <h1>Ideias</h1>
+        </section>
+
+        <main>
+            <section id="ideas">
+                <div class="idea">
+                    <img src="https://cdn-icons-png.flaticon.com/128/2317/2317963.png" alt="Curso de programação">
+                    <div class="content">
+                        <h3>Curso de programação</h3>
+                        <p>Estudo</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Inventore
+                            recusandae mollitia tenetur blanditiis,
+                            doloremque est minima soluta odit deleniti eligendi
+                            exercitationem,
+                            sint laboriosam quisquam facere
+                            voluptate, tempora debitis quasi repellat.
+                        </div>
+                        <a href="#">Ir para a Ideia</a>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="https://cdn-icons-png.flaticon.com/128/1719/1719726.png" alt="Imagem de saúde">
+
+                    <div class="content">
+                        <h3>Exercicios</h3>
+                        <p>Saúde</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Inventore
+                            recusandae mollitia tenetur blanditiis,
+                            doloremque est minima soluta odit deleniti eligendi
+                            exercitationem,
+                            sint laboriosam quisquam facere
+                            voluptate, tempora debitis quasi repellat.
+                        </div>
+                        <a href="#">Ir para a Ideia</a>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="https://cdn-icons-png.flaticon.com/128/10812/10812647.png" alt="Meditação em 
+                       casa">
+
+                    <div class="content">
+                        <h3>Meditação</h3>
+                        <p>Mentalidade</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Inventore
+                            recusandae mollitia tenetur blanditiis,
+                            doloremque est minima soluta odit deleniti eligendi
+                            exercitationem,
+                            sint laboriosam quisquam facere
+                            voluptate, tempora debitis quasi repellat.
+                        </div>
+                        <a href="#">Ir para a Ideia</a>
+                    </div>
+                </div>
+
+                <div class="idea">
+                    <img src="https://cdn-icons-png.flaticon.com/128/808/808439.png" alt="Imagem do gamer">
+                    <div class="content">
+                        <h3>Jogo de Videogame</h3>
+                        <p>Diversão</p>
+                        <div class="description">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Inventore
+                            recusandae mollitia tenetur blanditiis,
+                            doloremque est minima soluta odit deleniti eligendi
+                            exercitationem,
+                            sint laboriosam quisquam facere
+                            voluptate, tempora debitis quasi repellat.
+                        </div>
+                        <a href="#">Ir para a Ideia</a>
+                    </div>
+                </div>
+
+            </section>
+        </main>
+
+        <footer>
+            Com &#x1F493
+            <a href="https://www.linkedin.com/in/jose-mariotto-39b943224/" target="_blank">José Mariotto</a>
+        </footer>
+    </div>
+
+
+
+    <div id="modal" class="hide">
+        <div class="content">
+            <h1>Nova Ideia</h1>
+
+            <form action="">
+
+                <div class="input-wrapper">
+                    <label for="title">Título da Ideia</label>
+                    <input type="text" name="title">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="category">Categoria</label>
+                    <input type="text" name="category">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="image">Link da Imagem</label>
+                    <input type="url" name="image">
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="description">Digite uma descrição para essa ideia</label>
+                    <textarea name="description" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="input-wrapper">
+                    <label for="link">Link da ideia</label>
+                    <input type="url" name="link">
+                </div>
+
+                <a href="#" onclick="onOff()">Voltar</a>
+                <button>Salvar</button>
+
+            </form>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+
+
+</body>
+
+</html>
