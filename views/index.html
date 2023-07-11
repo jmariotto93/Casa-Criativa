@@ -56,56 +56,26 @@
 
     <section id="last-ideias">
 
+      {% for idea in ideas %}
+
       <div class="idea">
-        <img src="https://cdn-icons-png.flaticon.com/128/2317/2317963.png" alt="Curso de programação">
+        <img src="{{idea.img}}" alt="Imagem de {{idea.title}}">
 
         <div class="content">
-          <h3>Curso de programação</h3>
-          <p>Estudo</p>
+          <h3>{{idea.title}}</h3>
+          <p>{{idea.category}}</p>
           <div class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            recusandae mollitia tenetur blanditiis,
-            doloremque est minima soluta odit deleniti eligendi exercitationem,
-            sint laboriosam quisquam facere
-            voluptate, tempora debitis quasi repellat.
+            {{idea.description}}
           </div>
-          <a href="#">Ir para a Ideia</a>
+          <a href="{{idea.url}}">Ir para a Ideia</a>
         </div>
       </div>
 
-      <div class="idea">
-        <img src="https://cdn-icons-png.flaticon.com/128/1719/1719726.png">
+      {% endfor %}
 
-        <div class="content">
-          <h3>Exercicios</h3>
-          <p>Saúde</p>
-          <div class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            recusandae mollitia tenetur blanditiis,
-            doloremque est minima soluta odit deleniti eligendi exercitationem,
-            sint laboriosam quisquam facere
-            voluptate, tempora debitis quasi repellat.
-          </div>
-          <a href="#">Ir para a Ideia</a>
-        </div>
-      </div>
 
-      <div class="idea">
-        <img src="https://cdn-icons-png.flaticon.com/128/10812/10812647.png" alt="Meditação em casa">
 
-        <div class="content">
-          <h3>Meditação</h3>
-          <p>Mentalidade</p>
-          <div class="description">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
-            recusandae mollitia tenetur blanditiis,
-            doloremque est minima soluta odit deleniti eligendi exercitationem,
-            sint laboriosam quisquam facere
-            voluptate, tempora debitis quasi repellat.
-          </div>
-          <a href="#">Ir para a Ideia</a>
-        </div>
-      </div>
+
 
     </section>
 
