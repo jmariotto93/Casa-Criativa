@@ -48,9 +48,10 @@ nunjucks.configure("views", {
 // e capturo o pedido do cliente para responder 
 server.get("/", function(req, res) {
 
-    let lastIdeas = []
+    const reversedIdeas = [...ideas].reverse()  
 
-    for (let idea of ideas.reverse()) {
+    let lastIdeas = []
+    for (let idea of reversedIdeas) {
         if (lastIdeas.length < 2) {
             lastIdeas.push(idea)
         }
@@ -61,7 +62,10 @@ server.get("/", function(req, res) {
 })
 
 server.get("/ideias", function(req, res) {
-    return res.render("ideias.html")
+    
+    const reversedIdeas = [...ideas].reverse() 
+
+    return res.render("ideias.html", { ideas: reversedIdeas})
 })
 
 

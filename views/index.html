@@ -1,127 +1,49 @@
-<!DOCTYPE html>
-<html lang="pt-br">
+{% extends "layout.html" %}
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&display=swap"
-    rel="stylesheet">
-  <title>Casa Criativa</title>
-</head>
+{% block content %}
 
-<body>
+<section id="intro">
 
-  <div id="container">
+  <header>
+    <a href="/">
+      <img src="/logo.png" alt="Logo do site" />
+    </a>
 
-    <section id="intro">
+  </header>
 
-      <header>
-        <a href="/">
-          <img src="/logo.png" alt="Logo do site" />
-        </a>
+  <main>
 
-      </header>
+    <p>Ficar em casa em períodos longos, não deve ser nada fácil.</p>
+    <p>
+      Iremos catalogar ideias,
+      <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong>
+      e tudo que for necessário para tornar esse momento mais interessante.
+    </p>
+    <p>
+      Comece clicando em ver ideias para ver as ideias cadastradas e
+      contribua
+      adicioando a sua ideia.
+    </p>
+  </main>
 
-      <main>
+  <section class="buttons">
 
-        <p>Ficar em casa em períodos longos, não deve ser nada fácil.</p>
-        <p>
-          Iremos catalogar ideias,
-          <strong>brincadeiras, jogos, filmes, livros, cursos, dicas</strong>
-          e tudo que for necessário para tornar esse momento mais interessante.
-        </p>
-        <p>
-          Comece clicando em ver ideias para ver as ideias cadastradas e
-          contribua
-          adicioando a sua ideia.
-        </p>
-      </main>
-
-      <section class="buttons">
-
-        <button onclick="onOff()" class="addIdeias">+ Adicionar Ideias</button>
-        <a href="/ideias" class="button">Ver Ideias</a>
-      </section>
+    <button onclick="onOff()" class="addIdeias">+ Adicionar Ideias</button>
+    <a href="/ideias" class="button">Ver Ideias</a>
+  </section>
 
 
-      <footer>
-        Com &#x1F493
-        <a href="https://www.linkedin.com/in/jose-mariotto-39b943224/" target="_blank">José Mariotto</a>
-      </footer>
+  <footer>
+    Com &#x1F493
+    <a href="https://www.linkedin.com/in/jose-mariotto-39b943224/" target="_blank">José Mariotto</a>
+  </footer>
 
-    </section>
+</section>
 
-    <section id="last-ideias">
+<section id="last-ideias">
 
-      {% for idea in ideas %}
+  {% include "all_Ideas.html" %}
 
-      <div class="idea">
-        <img src="{{idea.img}}" alt="Imagem de {{idea.title}}">
+</section>
 
-        <div class="content">
-          <h3>{{idea.title}}</h3>
-          <p>{{idea.category}}</p>
-          <div class="description">
-            {{idea.description}}
-          </div>
-          <a href="{{idea.url}}">Ir para a Ideia</a>
-        </div>
-      </div>
-
-      {% endfor %}
-
-
-
-
-
-    </section>
-
-
-  </div>
-
-  <!--Modal-->
-  <div id="modal" class="hide">
-    <div class="content">
-      <h1>Nova Ideia</h1>
-
-      <form action="">
-
-        <div class="input-wrapper">
-          <label for="title">Título da Ideia</label>
-          <input type="text" name="title">
-        </div>
-
-        <div class="input-wrapper">
-          <label for="category">Categoria</label>
-          <input type="text" name="category">
-        </div>
-
-        <div class="input-wrapper">
-          <label for="image">Link da Imagem</label>
-          <input type="url" name="image">
-        </div>
-
-        <div class="input-wrapper">
-          <label for="description">Digite uma descrição para essa ideia</label>
-          <textarea name="description" cols="30" rows="10"></textarea>
-        </div>
-
-        <div class="input-wrapper">
-          <label for="link">Link da ideia</label>
-          <input type="url" name="link">
-        </div>
-
-        <a href="#" onclick="onOff()">Voltar</a>
-        <button>Salvar</button>
-
-      </form>
-    </div>
-  </div>
-
-  <script src="/main.js"></script>
-</body>
-
-</html>
+{% endblock %}
