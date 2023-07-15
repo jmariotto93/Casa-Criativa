@@ -13,7 +13,6 @@ db.run(`
         category TEXT,
         description TEXT,
         link TEXT
-
     );
 `)
 
@@ -25,8 +24,6 @@ INSERT INTO  ideas(
     category,
     description,
     link
-
-
 ) VALUES (?,?,?,?,?);
 `
 
@@ -38,11 +35,11 @@ const values = [
     "https://www.youtube.com/@2guarinos"
 ]
 
-//db.run(query, values, function(err) {
-//    if(err) return console.log(err)
+db.run(query, values, function(err) {
+    if(err) return console.log(err)
 
-//    console.log(this)
-//}) 
+   console.log(this)
+}) 
 
 // Consultar dados na tabela
  db.all(`SELECT * FROM ideas`, function(err, row) {
